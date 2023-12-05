@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>START LEARNING PYTHON - NOTES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cc4f5a4871.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://tse1.mm.bing.net/th?id=OIP.klbysaKElJixaTsohAYX8AHaEK&pid=Api&P=0&h=220'); /* Replace with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(209, 208, 228), 241, 241); /* Optional: Set text color to make it readable on the background */
+        }
+        
+        .content {
+            padding: 20px; /* Optional: Add padding for better visual appearance */
+        }
+        
+        .background-light {
+            background-color: rgba(23, 37, 102, 0.483); /* Use an rgba value with alpha for a semi-transparent background */
+        }
+        
+        /* Add more styles for other sections as needed */
+        
+        header {
+            background-color: #ff4e4e;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            position: relative; /* Added to position logo */
+        }
+
+        #logo {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto; /* Center the logo horizontally */
+            display: block;
+            margin-bottom: 10px; /* Adjust as needed */
+        }
+
+        nav {
+            background-color: #f25c5c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        nav.show {
+            transform: translateX(0);
+        }
+
+        nav a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #793232;
+            transition: 0.2s;
+            text-align: center;
+        }
+
+        nav a:hover {
+            color: #399ca1;
+        }
+
+        .content {
+            padding: 16px;
+            transition: margin-left 0.5s;
+        }
+
+        .toggler {
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(156, 36, 36);
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            display: none;
+        }
+
+        .toggler.show {
+            display: block;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu-icon.show {
+            display: block;
+        }
+
+        @media screen and (max-width: 576px) {
+            nav a {
+                font-size: 18px;
+            }
+
+            .toggler {
+                display: block;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .closebtn {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Logo placeholder -->
+        <img id="logo" src="https://www.python.org/static/img/psf-logo@2x.png" alt="Logo">
+
+        <h1 class="text-center">START LEARNING PYTHON</h1>
+    </header>
+
+    <!-- Use a button element to toggle the navigation -->
+    <button class="toggler" onclick="toggleNav()" aria-label="Toggle Navigation">&#9776;</button>
+    <div class="menu-icon" onclick="toggleNav()">☰</div>
+
+    <!-- Use a unique ID for the content section -->
+    <div class="content show-nav" id="content" aria-labelledby="contentLabel">
+        <section id="home" class="background-light text-center">
+            <!-- Your existing content goes here -->
+            <div class="snake-animation">
+                <div class="python-logo python-logo1"></div>
+                <div class="python-logo python-logo2"></div>
+                <h2 class="text-animation colorful-text">Welcome to the Python Training Program</h2>
+                <p class="text-animation colorful-text typewriter-animation">Empowering individuals with Python Excellence</p>
+                <p class="text-animation colorful-text typewriter-animation">Join us on this Python journey to enhance your skills!</p>
+            </div>
+
+            <div class="course-details text-center">
+                <p class="text-animation colorful-text">Our comprehensive Python training program covers a wide range of topics, from basic concepts to advanced programming techniques.</p>
+                <p class="text-animation colorful-text">Enroll now and gain valuable skills for your career or personal projects.</p>
+
+                <!-- Contact Information -->
+                <div class="contact-info text-center">
+                    <p class="text-animation colorful-text">For inquiries and enrollment:</p>
+                    <p class="text-animation colorful-text">WhatsApp Number: <a href="https://wa.me/919989238243" target="_blank" class="hover-effect">+91 99892 38243</a></p>
+                    <p class="text-animation colorful-text">Email id: <a href="mailto:sivasanju9989@gmail.com" class="hover-effect">sivasanju9989@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation overlay -->
+    <nav id="mySidenav" class="show" aria-labelledby="mySidenavLabel">
+        <div class="closebtn" onclick="toggleNav()">&times;</div>
+        <a href="home.html" class="text-center">Home</a>
+        <a href="pythonnotes.html" class="text-center">Python Notes</a>
+        <a href="videos.html" class="text-center">YouTube Videos</a>
+        <a href="interview.html" class="text-center">Interview Questions</a>
+        <a href="about.html" class="text-center">About</a>
+    </nav>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById("mySidenav");
+            const content = document.getElementById("content");
+
+            // Toggle the "show" class for the navigation
+            nav.classList.toggle("show");
+
+            // Toggle the "show-nav" class for the content
+            content.classList.toggle("show-nav");
+        }
+    </script>
+</body>
+</html>

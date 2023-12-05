@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>START LEARNING PYTHON - HOME</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cc4f5a4871.js" crossorigin="anonymous"></script>
+    <style>
+        /* Your styles here */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://tse2.mm.bing.net/th?id=OIP.v5_PKApklGt6uBuz76jrFQHaEo&pid=Api&P=0&h=220');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #ce06e4;
+        }
+
+        header,
+        nav {
+            background-color: rgba(238, 103, 103, 0.7);
+            color: #0d006e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ee6767;
+            color: #0d006e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f25c5c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        nav.show {
+            transform: translateX(0);
+        }
+
+        nav a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #793232;
+            transition: 0.2s;
+            text-align: center;
+            display: block;
+        }
+
+        nav a:hover {
+            color: #399ca1;
+        }
+
+        .toggler {
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(156, 36, 36);
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            display: none;
+        }
+
+        .toggler.show {
+            display: block;
+        }
+
+        .fa-bars {
+            display: none;
+            color: #c31818;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 576px) {
+            nav a {
+                font-size: 18px;
+            }
+
+            .toggler {
+                display: none;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+
+            .fa-bars,
+            nav a {
+                text-align: center;
+            }
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .background-light {
+            background-color: #d92727;
+        }
+
+        .vid {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #videoList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #videoList li {
+            margin: 10px 0;
+        }
+
+        #videoList li a {
+            text-decoration: none;
+            color: #83ee00;
+            font-size: 18px;
+        }
+
+        #videoContainer {
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+
+        .vid {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            background-image: url('https://tse2.mm.bing.net/th?id=OIP.v5_PKApklGt6uBuz76jrFQHaEo&pid=Api&P=0&h=220');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            color: #ce06e4;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .vid {
+                text-align: center;
+            }
+
+            iframe {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>START LEARNING PYTHON</h1>
+    </header>
+    <i class="fas fa-bars toggler" onclick="toggleNav()" aria-hidden="true"></i>
+    <nav id="mySidenav" class="show" aria-labelledby="mySidenavLabel">
+        <div class="closebtn" onclick="toggleNav()">&times;</div>
+        <a href="home.html" class="text-center">Home</a>
+        <a href="pythonnotes.html" class="text-center">Python Notes</a>
+        <a href="videos.html" class="text-center">YouTube Videos</a>
+        <a href="interview.html" class="text-center">Interview Questions</a>
+        <a href="about.html" class="text-center">About</a>
+    </nav>
+
+    <section id="home-content">
+        <h2>Welcome to the Start Learning Python</h2>
+        <p>This website provides valuable resources to help you learn Python programming language.
+            |||| SEE VIDEOS IN THE BOTTOM OF THE SECTION |||| just a single click to see >>>>>>
+        </p>
+        <!-- Add more content as needed -->
+    </section>
+
+    <div class="vid" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.v5_PKApklGt6uBuz76jrFQHaEo&pid=Api&P=0&h=220');">
+        <h1 id="h1"><a href="#">Youtube Videos</a></h1>
+        
+            <ol id="videoList">
+                <li><a href="#" onclick="loadVideo('Day 1', '8xD_pXw4Xfw')">Day 1 👈🏻click here see bellow vedio </a></li>
+                <li><a href="#" onclick="loadVideo('Day 2', 'MbobiGO-doI')">Day 2 👈🏻click here</a></li>
+                <li><a href="#" onclick="loadVideo('Day 3', 'SoYUiOJXX88')">Day 3👈🏻 (scroll down to watch)</a></li>
+                <li><a href="#" onclick="loadVideo('Day 4', 'IyAxShPDcmk')">Day 4👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 5', 'eL5qLbgpO9k')">Day 5👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 6', 'eL5qLbgpO9k')">👉🏻Day 6</a></li>
+                <li><a href="#" onclick="loadVideo('Day 7', 'LUpmYzX2y9U')">👉🏻Day 7</a></li>
+                <li><a href="#" onclick="loadVideo('Day 8', '_xgP0cfp4lo')">👉🏻Day 8</a></li>
+                <li><a href="#" onclick="loadVideo('Day 9', 'OgnPBJHxdlQ')">👉🏻Day 9</a></li>
+                <li><a href="#" onclick="loadVideo('Day 10', 'NA_lEdnMj0k')">👉🏻Day 10</a></li>
+                <li><a href="#" onclick="loadVideo('Day 11', 'I-LeerrfyOM')">Day 11👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 12', 'tAUhCOfmqCI')">Day 12👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 13', 'Nl6VeFsAGPM')">Day 13👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 14', 'mPp2MKpxKgg')">Day 14👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 15', 'LzMQCupHC8Q')">Day 15👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 16', 'pk_Xh99UasY')">👉🏻Day 16</a></li>
+                <li><a href="#" onclick="loadVideo('Day 17', 'VIDEO_ID_FOR_DAY_17')">👉🏻Day 17</a></li>
+                <li><a href="#" onclick="loadVideo('Day 18', '8K_veK5H0Ps')">👉🏻Day 18</a></li>
+                <li><a href="#" onclick="loadVideo('Day 19', '8GtqVRvzLM0')">👉🏻Day 19</a></li>
+                <li><a href="#" onclick="loadVideo('Day 20', '2rp2m-QXF9U')">👉🏻Day 20</a></li>
+                <li><a href="#" onclick="loadVideo('Day 21', '8gJPHxVb5RY')">Day 21👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 22', 'jc5jEcudSUk')">Day 22👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 23', 'Eaitp6NWrTQ')">Day 23👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 24', 'gnfjnJneQls')">Day 24👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 25', 'esKUu9wrrIM')">Day 25👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 26', 'tMAA8vUyDCY')">Day 26👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 27', 'w-Sj5Ip-55Y')">Day 27👈🏻</a></li>
+                <li><a href="#" onclick="loadVideo('Day 28', 'pnixmhvAQd0')">Day 28👈🏻</a></li>
+                <!-- Add more days and video IDs as needed -->
+            </ol>
+    </div>
+
+    <div id="videoContainer">
+        <!-- Video content will be dynamically loaded here -->
+    </div>
+
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById('mySidenav');
+            var icon = document.querySelector('.fa-bars');
+
+            if (nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                icon.style.color = '#c31818'; // Change color to the original color
+            } else {
+                nav.classList.add('show');
+                icon.style.color = '#399ca1'; // Change color to the active color
+            }
+        }
+
+        function loadVideo(day, videoId) {
+            var videoContainer = document.getElementById('videoContainer');
+            var previousDay = getPreviousDay(day);
+
+            videoContainer.innerHTML = `
+                <h3>${day}</h3>
+                <p>Description of ${day}.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                
+                <p><a href="#" onclick="loadVideo('${previousDay}', 'VIDEO_ID_FOR_${previousDay}')">Watch Previous Video (${previousDay})</a></p>
+            `;
+        }
+
+        function getPreviousDay(day) {
+            // Implement logic to get the previous day based on the selected day
+            // For simplicity, assuming a sequential order (Day 1, Day 2, Day 3, ...)
+            var dayNumber = parseInt(day.split(' ')[1]);
+            var previousDayNumber = dayNumber - 1;
+            return 'Day ' + (previousDayNumber < 1 ? 1 : previousDayNumber);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>START LEARNING PYTHON - ABOUT</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cc4f5a4871.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        i {
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .background-light {
+            background-color: #f5f5f5;
+        }
+
+        @media only screen and (max-width: 576px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            i {
+                margin-bottom: 10px;
+            }
+
+            a {
+                margin: 10px 0;
+                display: block;
+                padding: 8px 15px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white">
+        <h1>START LEARNING PYTHON</h1>
+    </header>
+
+    <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+        <a href="home.html" class="text-animation">Home</a>
+        <a href="pythonnotes.html" class="text-animation">Python Notes</a>
+        <a href="videos.html" class="text-animation">YouTube Videos</a>
+        <a href="interview.html" class="text-animation">Interview Questions</a>
+        <a href="about.html" class="text-animation">About</a>
+    </nav>
+
+    <section id="about" class="background-light">
+        <h2 class="text-animation">About Us</h2>
+        <p>This is the About Us page. Replace this placeholder text with information about your organization, team, or any relevant details you'd like to share.</p>
+        <p>You can provide details about your mission, goals, achievements, or any other information you think is important for visitors to know.</p>
+    </section>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.style.display = link.style.display === 'block' ? 'none' : 'block';
+            });
+        }
+    </script>
+</body>
+</html>

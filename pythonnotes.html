@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="topics.html"> <!-- Add this line if "topics.html" is your stylesheet -->
+    <style>
+     
+
+          
+            /* Additional styles for the navigation */
+            nav {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(160, 97, 236, 0.8); /* Light background for navigation */
+                padding: 20px;
+                border-radius: 5px;
+                position: fixed;
+                top: 0;
+                left: 0; /* Change to 0 for the navigation to be initially open */
+                width: 250px;
+                height: 100%;
+                transition: 0.5s;
+                z-index: 1;
+            }
+    
+            nav a {
+                text-decoration: none;
+                font-size: 20px;
+                color: rgb(112, 233, 208);
+                display: block;
+                margin-bottom: 5px;
+                transition: 0.3s;
+            }
+    
+            nav a:hover {
+                color: rgb(243, 100, 100);
+            }
+    
+            nav i {
+                font-size: 50px;
+                cursor: pointer;
+                color: rgb(202, 244, 232);
+                margin-bottom: 10px;
+            }
+    
+            .content {
+                margin-left: 250px;
+                transition: margin-left 0.5s;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: rgba(232, 232, 237, 0.8); /* Light background for content */
+                margin: 20px;
+            }
+    
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            nav {
+                width: 100%;
+                left: -100%;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/cc4f5a4871.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <center>
+
+    <!-- Toggler icon for smaller screens -->
+    <nav id="mySidenav">
+        <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+        <a href="pythonnotes.html" class="text-animation">Python Notes</a>
+        <a href="videos.html" class="text-animation">YouTube Videos</a>
+        <a href="interview.html" class="text-animation">Interview Questions</a>
+        <a href="about.html" class="text-animation">About</a>
+    </nav>
+
+ 
+  
+    <section id="topics" class="background-light">
+        <h2 class="text-animation">Python Topics</h2>
+    <div class="topic-list">
+                <!-- Add the interview questions here -->
+                <li class="text-animation"><a href="#python-features">Features of Python</a></li>
+                <li class="text-animation"><a href="#variables-identifiers">Variables & Identifiers</a></li>
+                <li class="text-animation"><a href="#identifiers">Identifiers and Rules</a></li>
+                <li class="text-animation"><a href="#data-types">Data types</a></li>
+                <li class="text-animation"><a href="#single-value-data-types">int,float,bool,complex(single data types)</a></li>
+                <li class="text-animation"><a href="#collection-data-types">string,list,tuple,set,dictionary(collection data types)</a></li>
+                <li class="text-animation"><a href="#set">Set</a></li>
+                <li class="text-animation"><a href="#in-built-methods">in-built-methods</a></li>
+                <li class="text-animation"><a href="#string-methods">String Inbuilt Methods</a></li>
+                <li class="text-animation"><a href="#list-methods">List Inbuilt Methods</a></li>
+                <li class="text-animation"><a href="#tuple-methods">Tuple Inbuilt Methods</a></li>
+                <li class="text-animation"><a href="#set-methods">Set Inbuilt Methods</a></li>
+                <li class="text-animation"><a href="#dictionary-methods">Dictionary Inbuilt Methods</a></li>
+                <li class="text-animation"><a href="#set-vs-dictionary">print method</a></li>
+                <li class="text-animation"><a href="#input-method">input method</a></li>
+                <li class="text-animation"><a href="#operators">Operators</a></li>
+                <li class="text-animation"><a href="#set-vs-dictionary">PYTHON PROGRAMING All programs</a></li>
+                <li class="text-animation"><a href="#conditional-statements">if ,elif ,else ,condtional statemts</a></li>
+                <li class="text-animation"><a href="#set-vs-dictionary">Type Casting</a></li>
+                <li class="text-animation"><a href="#for-loop">For loop using python </a></li>
+                <li class="text-animation"><a href="#while-loop">While loop using python</a></li>
+                <li class="text-animation"><a href="#control-statement">break,continue,pass(control statements)</a></li>
+                <li class="text-animation"><a href="#inbuilt-functions">functions</a></li>
+                <li class="text-animation"><a href="#list-vs-set">return key word</a></li>
+                <li class="text-animation"><a href="#recursion">Recursion</a></li>
+                <li class="text-animation"><a href="#oops-concepts">oops-concepts</a></li>
+                <li class="text-animation"><a href="#types-of-arguments">Types of arguments</a></li>
+                <li class="text-animation"><a href="#list-vs-set">using functionscoding</a></li>
+                
+            </ol>
+            
+        </div></center>
+    </section>
+    <section id="python-basics" class="background-light">
+       <center> <h2 class="text-animation">Python Basics</h2>
+        <!-- Features of Python -->
+        <div id="python-features">
+            <h3 class="text-animation">Features of Python</h3>
+            <ul>
+                <li class="text-animation">Cross-platform language</li>
+                <li class="text-animation">Dynamically typed</li>
+                <li class="text-animation">Interpreted language</li>
+                <li class="text-animation">Functional programming language</li>
+                <li class="text-animation">Object-oriented programming language</li>
+                <li class="text-animation">Case sensitive</li>
+                <li class="text-animation">Open source</li>
+            </ul>
+        </div>
+    
+        <!-- Cross-platform language -->
+        <div id="cross-platform">
+            <h3 class="text-animation">Cross-platform language</h3>
+            <p class="text-animation">
+                We can write a program on one operating system and run (or) execute the same program on any other operating system without making any changes.
+            </p>
+            <p class="text-animation">Examples: Windows, macOS, Linux</p>
+        </div>
+    
+        <!-- Dynamically Typed -->
+        <div id="dynamically-typed">
+            <h3 class="text-animation">Dynamically Typed</h3>
+            <p class="text-animation">
+                No need to declare which type of data is stored in the variable.
+            </p>
+        </div>
+    
+        <!-- Interpreted language -->
+        <div id="interpreted-language">
+            <h3 class="text-animation">Interpreted Language</h3>
+            <p class="text-animation">
+                Python is an interpreted language. It compiles the code line by line. If it encounters an error, the flow of execution is terminated.
+            </p>
+        </div>
+    
+        <!-- Functional programming language -->
+        <div id="functional-programming">
+            <h3 class="text-animation">Functional Programming Language</h3>
+            <p class="text-animation">
+                We can write code using functions.
+            </p>
+        </div>
+    
+        <!-- Object-oriented programming language -->
+        <div id="oop">
+            <h3 class="text-animation">Object-oriented Programming Language (OOP)</h3>
+            <p class="text-animation">
+                We can write code using classes and objects. It is called an object-oriented programming language.
+            </p>
+        </div>
+    
+        <!-- Case sensitive -->
+        <div id="case-sensitive">
+            <h3 class="text-animation">Case Sensitive</h3>
+            <p class="text-animation">
+                Uppercase and lowercase alphabets are treated as different.
+            </p>
+        </div>
+    
+        <!-- Open source -->
+        <div id="open-source">
+            <h3 class="text-animation">Open Source</h3>
+            <p class="text-animation">
+                Freely available on the internet.
+            </p>
+        </div>
+    </section>
+    <section id="variables-identifiers" class="background-light">
+        <!-- Variable and Identifiers -->
+        <div>
+            <h2 class="text-animation">Variables and Identifiers</h2>
+    
+            <!-- Variable Value Space -->
+            <div id="variable-value-space">
+                <h3 class="text-animation">Variable Value Space</h3>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>x</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>z</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>y</td>
+                        <td>20</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </center>
+    </section>
+            <!-- Variable and Identifier Rules -->
+        <section id="identifiers" class="background-light">
+            <div id="identifier-rules">
+                <h3 class="text-animation">Rules of Identifiers</h3>
+                <ul>
+                    <li class="text-animation">Identifiers can't start with numbers.</li>
+                    <li class="text-animation">Special characters are not allowed except underscore (_).</li>
+                    <li class="text-animation">Keywords can't be used as identifiers.</li>
+                </ul>
+            </div>
+        </section>
+    <!-- Data Types -->
+    <section id="data-types" class="background-light">
+        <h2 class="text-animation">Data Types</h2>
+    
+        <!-- Single Value Data Types -->
+        <div>
+            <h3 class="text-animation">Single Value Data Types</h3>
+            <ul>
+                <li class="text-animation">Integer</li>
+                <li class="text-animation">Float</li>
+                <li class="text-animation">Boolean</li>
+                <li class="text-animation">Complex</li>
+            </ul>
+        </div>
+    
+        <!-- Collection Data Types -->
+        <div>
+            <h3 class="text-animation">Collection Data Types</h3>
+            <ul>
+                <li class="text-animation">String</li>
+                <li class="text-animation">List</li>
+                <li class="text-animation">Tuple</li>
+                <li class="text-animation">Set</li>
+                <li class="text-animation">Dictionary</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Single Value Data Types Details -->
+    <section id="single-value-data-types" class="background-light">
+        <!-- Integer -->
+        <div id="integer">
+            
+            <h3>Single Value Data Types</h3>
+            <h3 class="text-animation">Integer</h3>
+            <p class="text-animation">
+                A value without a decimal part, either positive or negative, is considered an integer.
+            </p>
+        </div>
+    
+        <!-- Float -->
+        <div id="float">
+            <h3 class="text-animation">Float</h3>
+            <p class="text-animation">
+                A value with a decimal part, either positive or negative, is considered a float.
+            </p>
+        </div>
+    
+        <!-- Boolean -->
+        <div id="boolean">
+            <h3 class="text-animation">Boolean</h3>
+            <p class="text-animation">
+                Boolean has only two values: True and False. In Python, True is considered as 1, and False is considered as 0.
+            </p>
+        </div>
+    
+        <!-- Complex -->
+        <div id="complex">
+            <h3 class="text-animation">Complex</h3>
+            <p class="text-animation">
+                Complex data type has two parts: real and imaginary. It is represented as X + Yj, where X is the real part, and Y is the imaginary part.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Collection Data Types Details -->
+    <section id="collection-data-types" class="background-light">
+        <!-- String -->
+        <div id="string">
+            <h3>Collection Data Types</h3>
+            <h3 class="text-animation">String</h3>
+            <p class="text-animation">
+                Strings are declared using single quotes, double quotes, and triple quotes. They are ordered data types that support indexing. Strings are immutable and cannot be modified.
+            </p>
+        </div>
+    
+        <!-- List -->
+        <div id="list">
+            <h3 class="text-animation">List</h3>
+            <ul>
+                <li class="text-animation">List elements are enclosed with square brackets.</li>
+                <li class="text-animation">List is an ordered data type, so it supports indexing.</li>
+                <li class="text-animation">List is a mutable data type, so it can be modified.</li>
+                <li class="text-animation">List allows duplicate values.</li>
+                <li class="text-animation">List allows both homogeneous and heterogeneous data types.</li>
+            </ul>
+        </div>
+    
+        <!-- Tuple -->
+        <div id="tuple">
+            <h3 class="text-animation">Tuple</h3>
+            <ul>
+                <li class="text-animation">Tuple is declared by using round brackets.</li>
+                <li class="text-animation">Tuple is an ordered data type, so it supports indexing.</li>
+                <li class="text-animation">Tuple is an immutable data type.</li>
+                <li class="text-animation">Tuple allows duplicate values.</li>
+                <li class="text-animation">Tuple allows both homogeneous and heterogeneous data types.</li>
+                <li class="text-animation">Note: Tuple is immutable; it cannot be modified, but mutable data types inside the tuple can be modified.</li>
+            </ul>
+        </div>
+    
+        <!-- Set -->
+        <div id="set">
+            <h3 class="text-animation">Set</h3>
+            <ul>
+                <li class="text-animation">Set elements are declared using curly brackets.</li>
+                <li class="text-animation">Empty set is declared using the set function.</li>
+                <li class="text-animation">Set is an unordered data type; it doesn't support indexing.</li>
+                <li class="text-animation">Set is a mutable data type; it can be modified.</li>
+                <li class="text-animation">Set does not allow duplicates.</li>
+                <li class="text-animation">Set allows both homogeneous and heterogeneous data types, but it allows only immutable data types.</li>
+            </ul>
+        </div>
+    
+        <!-- Dictionary -->
+        <div id="dictionary">
+            <h3 class="text-animation">Dictionary</h3>
+            <ul>
+                <li class="text-animation">Dictionary elements are stored using curly brackets, and elements are in the form of key-value pairs.</li>
+                <li class="text-animation">It is an ordered data type, but it doesn't support indexing.</li>
+                <li class="text-animation">It is a mutable data type, and it can be modified.</li>
+                <li class="text-animation">Duplicate keys are not allowed; if we add a duplicate key, the old value is replaced with the new value, while duplicate values are allowed.</li>
+                <li class="text-animation">Only immutable keys are allowed, whereas values can be both mutable and immutable.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- In-Built Methods -->
+    <section id="in-built-methods" class="background-light">
+        <h2 class="text-animation">In-Built Methods</h2>
+    
+        <!-- String In-Built Methods -->
+        <div id="string-methods">
+            <h3 class="text-animation">String In-Built Methods</h3>
+    
+            <!-- Upper -->
+            <div id="upper-method">
+                <h4 class="text-animation">Upper()</h4>
+                <p class="text-animation">It converts lower case alphabets into upper case alphabets.</p>
+                <pre class="text-animation">Syntax: Variable name.upper()</pre>
+            </div>
+    
+            <!-- Lower -->
+            <div id="lower-method">
+                <h4 class="text-animation">Lower()</h4>
+                <p class="text-animation">It converts upper case alphabets into lower case alphabets.</p>
+                <pre class="text-animation">Syntax: Variable name.lower()</pre>
+            </div>
+    
+            <!-- Swapcase -->
+            <div id="swapcase-method">
+                <h4 class="text-animation">Swapcase()</h4>
+                <p class="text-animation">This method converts upper case alphabets into lower case alphabets and lower case alphabets into upper case alphabets.</p>
+                <pre class="text-animation">Syntax: Variable name.swapcase()</pre>
+            </div>
+    
+            <!-- Title -->
+            <div id="title-method">
+                <h4 class="text-animation">Title()</h4>
+                <p class="text-animation">It converts the first letter of each word into upper case and the remaining characters into lower case.</p>
+                <pre class="text-animation">Syntax: Variable name.title()</pre>
+            </div>
+    
+            <!-- Capitalize -->
+            <div id="capitalize-method">
+                <h4 class="text-animation">Capitalize()</h4>
+                <p class="text-animation">It converts the first character of the string into upper case and the remaining characters into lower case.</p>
+                <pre class="text-animation">Syntax: Variable name.capitalize()</pre>
+            </div>
+    
+            <!-- Index -->
+            <div id="index-method">
+                <h4 class="text-animation">Index()</h4>
+                <p class="text-animation">It is used to get the index position of a substring. If a substring is available more than once, it returns the index position of the first occurrence. If the substring is not found, it returns a value error.</p>
+                <pre class="text-animation">Syntax: Variable name.index(substring)</pre>
+            </div>
+    
+            <!-- Rindex -->
+            <div id="rindex-method">
+                <h4 class="text-animation">Rindex()</h4>
+                <p class="text-animation">It returns the index position of the last occurrence of a substring. If a substring is not found, it returns a value error.</p>
+                <pre class="text-animation">Syntax: Variable name.rindex(substring)</pre>
+            </div>
+    
+            <!-- Count -->
+            <div id="count-method">
+                <h4 class="text-animation">Count()</h4>
+                <p class="text-animation">It returns the number of times a substring is repeated in the given string. If the substring is not available, it returns 0.</p>
+                <pre class="text-animation">Syntax: Variable name.count(substring)</pre>
+            </div>
+    
+            <!-- Split -->
+            <div id="split-method">
+                <h4 class="text-animation">Split()</h4>
+                <p class="text-animation">Split method is used to convert a string into a list. If a delimiter is not provided, then by default, it considers space as the delimiter.</p>
+                <pre class="text-animation">Syntax: Variable name.split('')</pre>
+            </div>
+    
+            <!-- Replace -->
+            <div id="replace-method">
+                <h4 class="text-animation">Replace()</h4>
+                <p class="text-animation">This method replaces the given string with another substring.</p>
+                <pre class="text-animation">Syntax: Variable name.replace()</pre>
+            </div>
+    
+            <!-- Continue with other string methods... -->
+    
+        </div>
+    
+        <!-- Continue with other data types and their methods... -->
+    
+    <!-- Continue with String In-Built Methods -->
+    <!-- Continued from the previous code -->
+    
+            <!-- Join -->
+            
+            <div id="join-method" >
+                <h4 class="text-animation">Join()</h4>
+                <p class="text-animation">Join method is used to convert a list of substrings into a string by using one glue character.</p>
+                <pre class="text-animation">Syntax: '<gluecharacter>'.join(Variable name)</pre>
+            </div>
+    
+            <!-- Format String / F-String -->
+            <div id="format-fstring">
+                <h4 class="text-animation">Format String / F-String</h4>
+                <p class="text-animation">Example:</p>
+                <pre class="text-animation">
+                    name = 'Krish'
+                    age = 23
+                    print("{}'s age is {}".format(name, age))
+                    print(f"{name}'s age is {age}")
+                </pre>
+            </div>
+    
+            <!-- Other String Methods... -->
+    
+        </div>
+    </section>
+        <section id="list-methods" class="background-light">
+        <!-- List In-Built Methods -->
+        <div >
+            
+            <h3 class="text-animation">List In-Built Methods</h3>
+    
+            <!-- Append -->
+            <div id="append-method">
+                <h4 class="text-animation">Append()</h4>
+                <p class="text-animation">Append method is used to add one value at a time. This will add the value at the end of the list.</p>
+                <pre class="text-animation">Syntax: Variable name.append(value)</pre>
+            </div>
+    
+            <!-- Insert -->
+            <div id="insert-method">
+                <h4 class="text-animation">Insert()</h4>
+                <p class="text-animation">This method is used to add one value at a time at the given index position. If the given index is more than the length of the list, the value is added at the end of the list.</p>
+                <pre class="text-animation">Syntax: Variable name.insert(index, value)</pre>
+            </div>
+    
+            <!-- Extend -->
+            <div id="extend-method">
+                <h4 class="text-animation">Extend()</h4>
+                <p class="text-animation">This method is used to add multiple values at a time. It contains one argument only, and that should be a collection data type.</p>
+                <pre class="text-animation">Syntax: Variable name.extend(collection data type)</pre>
+            </div>
+    
+            <!-- Remove -->
+            <div id="remove-method">
+                <h4 class="text-animation">Remove()</h4>
+                <p class="text-animation">This method removes based on the given value. If the value occurs more than once, it removes the first occurrence. If the value is not available, it gives a value error.</p>
+                <pre class="text-animation">Syntax: Variable name.remove(value)</pre>
+            </div>
+    
+            <!-- Pop -->
+            <div id="pop-method">
+                <h4 class="text-animation">Pop()</h4>
+                <p class="text-animation">Pop() removes a value based on the index provided. If no index is given, it removes the last value in the list (default index position is -1). If the index position is more than the length of the list, it throws an index error.</p>
+                <pre class="text-animation">Syntax: Variable name.pop(index)</pre>
+            </div>
+    
+            <!-- Clear -->
+            <div id="clear-method">
+                <h4 class="text-animation">Clear()</h4>
+                <p class="text-animation">It is used to remove all the values in the list.</p>
+            </div>
+    
+            <!-- Index, Count, Sort, Join, Other List Methods... -->
+    
+        </div>
+    
+        <!-- Continue with other data types and their methods... -->
+    
+   <!-- Continued from the previous code -->
+    
+    <!-- Index -->
+    <div id="index-method">
+        <h4 class="text-animation">Index()</h4>
+        <p class="text-animation">It is used to get the index position of a substring. If a substring is available more than once, it returns the index position of the first occurrence. If the substring is not found, it returns a value error.</p>
+        <pre class="text-animation">Syntax: Variable name.index(substring)</pre>
+    </div>
+    
+    <!-- Count -->
+    <div id="count-method">
+        <h4 class="text-animation">Count()</h4>
+        <p class="text-animation">It returns the number of times a substring is repeated in the given string. If the substring is not available, it returns 0.</p>
+        <pre class="text-animation">Syntax: Variable name.count(substring)</pre>
+    </div>
+    
+    <!-- Sort -->
+    <div id="sort-method">
+        <h4 class="text-animation">Sort()</h4>
+        <p class="text-animation">This method is used to arrange values of the list in order (Ascending order or Descending order).</p>
+        <pre class="text-animation">Syntax: Variable name.sort()  <!-- For Ascending order --></pre>
+        <pre class="text-animation">Syntax: Variable name.sort(reverse=True)  <!-- For Descending order --></pre>
+    </div>
+    
+    <!-- Join -->
+    <div id="join-list">
+        <h4 class="text-animation">Join()</h4>
+        <p class="text-animation">Join method is used to convert a list of substrings into a string by using one glue character.</p>
+        <pre class="text-animation">Syntax: '<gluecharacter>'.join(Variable name)</pre>
+    </div>
+    
+    <!-- Other List Methods... -->
+    
+    </div>
+    </section>
+    <!-- Continue with other data types and their methods... -->
+    
+    <!-- Continued from the previous code -->
+    
+        <!-- Tuple In-Built Methods -->
+        <section class="background-light">
+        <div id="tuple-methods">
+            <h3 class="text-animation">Tuple In-Built Methods</h3>
+    
+            <!-- Index -->
+            <div id="tuple-index-method">
+                <h4 class="text-animation">Index()</h4>
+                <p class="text-animation">It is used to get the index position of a substring in a tuple. If a substring is available more than once, it returns the index position of the first occurrence. If the substring is not found, it returns a value error.</p>
+                <pre class="text-animation">Syntax: Variable name.index(substring)</pre>
+            </div>
+    
+            <!-- Count -->
+            <div id="tuple-count-method">
+                <h4 class="text-animation">Count()</h4>
+                <p class="text-animation">It returns the number of times a substring is repeated in the given tuple. If the substring is not available, it returns 0.</p>
+                <pre class="text-animation">Syntax: Variable name.count(substring)</pre>
+            </div>
+    
+            <!-- Clear -->
+            <div id="tuple-clear-method">
+                <h4 class="text-animation">Clear()</h4>
+                <p class="text-animation">It is used to remove all values in a tuple.</p>
+                <pre class="text-animation">Syntax: Variable name.clear()</pre>
+            </div>
+    
+            <!-- Other Tuple Methods... -->
+    
+        </div>
+        </section>
+        <!-- Set In-Built Methods -->
+    
+    
+    
+        <!-- Continue with Set In-Built Methods... -->
+    
+        <!-- Set In-Built Methods -->
+        <section class="background-light">
+        <div id="set-methods">
+            <h3 class="text-animation">Set In-Built Methods</h3>
+    
+            <!-- Add, Update, Remove (Pop, Discard), Clear, Union, Intersection, Difference, Other Set Methods... -->
+    
+            <!-- Add -->
+            <div id="set-add-method">
+                <h4 class="text-animation">Add()</h4>
+                <p class="text-animation">This method is used to add a single value to a set. It adds the value to a random position. Only immutable datatypes can be added.</p>
+                <pre class="text-animation">Example: A=set(); A.add(10);</pre>
+            </div>
+    
+            <!-- Update -->
+            <div id="set-update-method">
+                <h4 class="text-animation">Update()</h4>
+                <p class="text-animation">It is used to add multiple values to a set. It takes one argument that should be a collection datatype.</p>
+                <pre class="text-animation">Example: A=set(); A.update('Ayan');</pre>
+            </div>
+    
+            <!-- Remove (Pop, Discard) -->
+            <div id="set-remove-method">
+                <h4 class="text-animation">Remove()</h4>
+                <p class="text-animation">This method is used to remove values from a set. If the value is not available, it throws a key error.</p>
+                <pre class="text-animation">Example: A= {10,20,30,40}; A.remove(10);</pre>
+    
+                <h4 class="text-animation">Discard()</h4>
+                <p class="text-animation">It is used to remove values from a set. If the given value is not available, it will not throw any error.</p>
+                <pre class="text-animation">Example: A= {10,20,30,40}; A.discard(10);</pre>
+    
+                <p class="text-animation">Difference between remove and discard:</p>
+                <ul class="text-animation">
+                    <li>If the given value is not available, <code>remove()</code> throws a key error, whereas <code>discard()</code> will not throw any error.</li>
+                </ul>
+            </div>
+    
+            <!-- Pop -->
+            <div id="set-pop-method">
+                <h4 class="text-animation">Pop()</h4>
+                <p class="text-animation">This method is used to remove a random value from a set. It returns the removed value.</p>
+                <pre class="text-animation">Example: A= {10,20,30,40}; B=A.pop();</pre>
+    
+                <p class="text-animation">Difference between remove and pop:</p>
+                <ul class="text-animation">
+                    <li><code>Remove()</code> takes the value as an argument, whereas <code>pop()</code> will not take any argument.</li>
+                    <li><code>remove()</code> will not return any value, whereas <code>pop()</code> returns the removed value.</li>
+                </ul>
+            </div>
+    
+            <!-- Clear -->
+            <div id="set-clear-method">
+                <h4 class="text-animation">Clear()</h4>
+                <p class="text-animation">It is used to remove all values in a set.</p>
+                <pre class="text-animation">Syntax: Variable name.clear()</pre>
+            </div>
+    
+            <!-- Union, Intersection, Difference, Other Set Methods... -->
+    
+        </div>
+    
+        <!-- Continue with Dictionary In-Built Methods... -->
+    
+        <!-- Dictionary In-Built Methods -->
+        </section>
+        <section class="background-light">
+        <div id="dictionary-methods">
+            <h3 class="text-animation">Dictionary In-Built Methods</h3>
+    
+            <!-- Add (Update), Remove (Pop, Popitem), Get, Setdefault, Fromkeys, Clear, Other Dictionary Methods... -->
+    
+            <!-- Add (Update) -->
+            <div id="dictionary-add-method">
+                <h4 class="text-animation">Add (Update)</h4>
+                <p class="text-animation">To add key-value pairs in a dictionary:</p>
+                <pre class="text-animation">Syntax: Variable name[key]=value</pre>
+                <pre class="text-animation">Example: D={}; D['A']=10;</pre>
+    
+                <p class="text-animation">Update method is used to add multiple key-value pairs to the dictionary:</p>
+                <pre class="text-animation">Example: A={'P':10,'Q':20}; B={'R':30,'S':40}; A.update(B);</pre>
+            </div>
+    
+            <!-- Remove (Pop, Popitem) -->
+            <div id="dictionary-remove-method">
+                <h4 class="text-animation">Remove (Pop, Popitem)</h4>
+                <p class="text-animation">To remove key-value pairs from a dictionary:</p>
+                <pre class="text-animation">Syntax: Variable name.pop(key)</pre>
+                
+    
+                <p class="text-animation">Difference between pop and popitem:</p>
+                <ul class="text-animation">
+                    <li><code>pop()</code> takes the key as an argument, whereas <code>popitem()</code> will not accept any argument.</li>
+                    <li><code>pop()</code> returns the value, <code>popitem()</code> returns the key-value pair in the form of a tuple.</li>
+                </ul>
+            </div>
+    
+            <!-- Get -->
+            <div id="dictionary-get-method">
+                <h4 class="text-animation">Get()</h4>
+                <p class="text-animation">This method returns the value of the given key. If the key is not available, it returns the default value. If the default value is not given, it returns none.</p>
+                <pre class="text-animation">Syntax: Variable name.get(key, default value)</pre>
+            </div>
+    
+            <!-- Setdefault -->
+            <div id="dictionary-setdefault-method">
+                <h4 class="text-animation">Setdefault()</h4>
+                <p class="text-animation">It returns the value of the given key. If the key is not available, then it returns the default value and updates the dictionary with the key-value pair.</p>
+                <pre class="text-animation">Syntax: Variable name.setdefault(key, default value)</pre>
+            </div>
+    
+            <!-- Difference between set() and setdefault() -->
+            <div id="dictionary-set-vs-setdefault">
+                <h4 class="text-animation">Difference between set() and setdefault()</h4>
+                <p class="text-animation">If the key is not available in the dictionary, then <code>get()</code> method returns the default value, whereas <code>setdefault()</code> method updates the dictionary with the key-value pair.</p>
+            </div>
+    
+            <!-- Fromkeys -->
+            <div id="dictionary-fromkeys-method">
+                <h4 class="text-animation">Fromkeys()</h4>
+                <p class="text-animation">This method updates the keys with a common value. If the value is not given, it updates with the none keyword.</p>
+                <pre class="text-animation">Example: D={}; D=D.fromkeys('ABC', 1000);</pre>
+            </div>
+    
+            <!-- Continue with other Dictionary Methods... -->
+    
+        </div>
+    
+        <!-- Continue with Float, Boolean, Complex, Other Data Types and their Methods... -->
+    
+    </section>
+    <!-- Operators Section -->
+    <section id="operators" class="background-light">
+        <h2 class="text-animation">Operators</h2>
+    
+        <!-- Airthmetic Operations -->
+        <div id="arithmetic-operations">
+            <h3 class="text-animation">Arithmetic Operations</h3>
+            <p>Arithmetic operations involve basic mathematical calculations:</p>
+            <ul>
+                <li>Addition (+)</li>
+                <li>Subtraction (-)</li>
+                <li>Multiplication (*)</li>
+                <li>Division (/)</li>
+                <li>Floor Division (//)</li>
+                <li>Modulus (%)</li>
+            </ul>
+        </div>
+    
+        <!-- Assignment Operations -->
+        <div id="assignment-operations">
+            <h3 class="text-animation">Assignment Operations</h3>
+            <p>Assignment operations are used to assign values to variables:</p>
+            <ul>
+                <li>Simple Assignment (=)</li>
+                <li>Comparison and Assignment (==)</li>
+            </ul>
+        </div>
+    
+        <!-- Comparison Operators -->
+        <div id="comparison-operators">
+            <h3 class="text-animation">Comparison Operators</h3>
+            <p>Comparison operators are used to compare values:</p>
+            <ul>
+                <li>Greater Than (>)</li>
+                <li>Less Than (<)</li>
+                <li>Less Than or Equal To (<=)</li>
+                <li>Greater Than or Equal To (>=)</li>
+            </ul>
+        </div>
+    
+        <!-- Logical Operations -->
+        <div id="logical-operations">
+            <h3 class="text-animation">Logical Operations</h3>
+    
+            <!-- And -->
+            <div id="and-operation">
+                <h4 class="text-animation">Logical (and)</h4>
+                <p>The "and" operator returns True only if both conditions are True.</p>
+                <code>False and True</code>
+                <code>True and False</code>
+            </div>
+    
+            <!-- Or -->
+            <div id="or-operation">
+                <h4 class="text-animation">Logical (or)</h4>
+                <p>The "or" operator returns True if at least one condition is True.</p>
+                <code>True or False</code>
+                <code>False or True</code>
+            </div>
+    
+            <!-- Not -->
+            <div id="not-operation">
+                <h4 class="text-animation">Logical (not)</h4>
+                <p>The "not" operator negates the truth value, i.e., True becomes False and False becomes True.</p>
+                <code>print(not False)</code>
+                <code>print(not True)</code>
+            </div>
+    
+        </div>
+    
+        <!-- Bitwise Operations -->
+        <div id="bitwise-operations">
+            <h3 class="text-animation">Bitwise Operations</h3>
+            <p>Bitwise operators perform operations on binary representations of integers:</p>
+            <ul>
+                <li>Bitwise AND (&)</li>
+                <li>Bitwise OR (|)</li>
+                <li>Bitwise XOR (^)</li>
+                <li>Bitwise NOT (~)</li>
+                <li>Bitwise Right Shift (>>)</li>
+                <li>Bitwise Left Shift (<<)</li>
+            </ul>
+        </div>
+    
+        <!-- Identity Operators -->
+        <div id="identity-operators">
+            <h3 class="text-animation">Identity Operators</h3>
+            <p>Identity operators are used to compare the memory locations of two objects:</p>
+            <ul>
+                <li>Identity (is)</li>
+                <li>Not Identity (is not)</li>
+            </ul>
+        </div>
+    
+        <!-- Membership Operators -->
+        <div id="membership-operators">
+            <h3 class="text-animation">Membership Operators</h3>
+            <p>Membership operators are used to test whether a value is a member of a sequence:</p>
+            <ul>
+                <li>Membership (in)</li>
+                <li>Not in (not in)</li>
+            </ul>
+        </div>
+    
+    <!-- Continued from the previous code -->
+    
+    <!-- Logical (and) -->
+    <div id="logical-and">
+        <h4 class="text-animation">Logical (and)</h4>
+        <p>Logical AND returns True only if both conditions are True.</p>
+        <code>False and True</code>
+        <code>True and False</code>
+    </div>
+    
+    <!-- Logical (or) -->
+    <div id="logical-or">
+        <h4 class="text-animation">Logical (or)</h4>
+        <p>Logical OR returns True if at least one condition is True.</p>
+        <code>True or False</code>
+        <code>False or True</code>
+    </div>
+    
+    <!-- Logical (not) -->
+    <div id="logical-not">
+        <h4 class="text-animation">Logical (not)</h4>
+        <p>Logical NOT negates the truth value, i.e., True becomes False and False becomes True.</p>
+        <code>print(not False)</code>
+        <code>print(not True)</code>
+    </div>
+    
+    <!-- Is Operator -->
+    <div id="is-operator">
+        <h3 class="text-animation">Is Operator</h3>
+        <p>The "is" operator returns True if two variables reference the same object.</p>
+        <code>x is y</code>
+    </div>
+    
+    <!-- Is Not Operator -->
+    <div id="is-not-operator">
+        <h3 class="text-animation">Is Not Operator</h3>
+        <p>The "is not" operator returns True if two variables reference different objects.</p>
+        <code>x is not y</code>
+    </div>
+    
+    <!-- In Operator -->
+    <div id="in-operator">
+        <h3 class="text-animation">In Operator</h3>
+        <p>The "in" operator returns True if a value is found in the sequence.</p>
+        <code>value in sequence</code>
+    </div>
+    
+    <!-- Not In Operator -->
+    <div id="not-in-operator">
+        <h3 class="text-animation">Not In Operator</h3>
+        <p>The "not in" operator returns True if a value is not found in the sequence.</p>
+        <code>value not in sequence</code>
+    </div>
+    </section>
+    <!-- Input Method -->
+    <section id="input-method" class="background-light">
+        <h2 class="text-animation">Input Method</h2>
+    
+        <p>
+            The <code>input()</code> method is used to take values at runtime in Python.
+            Given values are considered as string data type by default.
+        </p>
+    
+        <code>
+            user_input = input("Enter a value: ")<br>
+            # The entered value is stored in the variable 'user_input'
+        </code>
+    
+    </section>
+    
+    
+    <!-- Conditional Statements -->
+    <section id="conditional-statements" class="background-light">
+        <h2 class="text-animation">Conditional Statements</h2>
+    
+        <!-- Conditional Statements Overview -->
+        <div id="conditional-statements-overview">
+            <h3 class="text-animation">Conditional Statements Overview</h3>
+            <p>
+                Conditional statements, also known as control statements, are used to execute different code based on different conditions.
+                The primary conditional statements in Python are <code>if</code>, <code>else</code>, and <code>elif</code>.
+            </p>
+        </div>
+    
+        <!-- If Block -->
+        <div id="if-block">
+            <h3 class="text-animation">If Block</h3>
+            <p>
+                The <code>if</code> block is executed if the given condition is True.
+                It is also called the True block.
+            </p>
+            <code>
+                if condition:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the if block
+            </code>
+        </div>
+    
+        <!-- Else Block -->
+        <div id="else-block">
+            <h3 class="text-animation">Else Block</h3>
+            <p>
+                The <code>else</code> block is executed if the given condition in the <code>if</code> block is False.
+                It is also called the False block.
+            </p>
+            <code>
+                if condition:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the if block<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the else block
+            </code>
+            <p>
+                For an <code>else</code> block, an <code>if</code> block is not mandatory.
+            </p>
+        </div>
+    
+        <!-- Elif Block -->
+        <div id="elif-block">
+            <h3 class="text-animation">Elif Block</h3>
+            <p>
+                The <code>elif</code> block is used when there are multiple conditions to check.
+                If the previous condition (in the <code>if</code> or <code>elif</code> block) is False, control goes to the <code>elif</code> block.
+                Multiple <code>elif</code> blocks can be used for one <code>if</code> block.
+            </p>
+            <code>
+                if condition1:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the if block<br>
+                elif condition2:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the elif block<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the else block
+            </code>
+        </div>
+        </section>
+    <!-- Range -->
+    <section id="range" class="background-light">
+        <h2 class="text-animation">Range</h2>
+    
+        <p>
+            Basically, the <code>range</code> function is used to generate a series of numbers in Python.
+        </p>
+    
+        <div id="range-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+    
+            <ul>
+                <li><code>range(end+1)</code></li>
+                <li><code>range(start, end+1)</code></li>
+                <li><code>range(start, end+1, step)</code></li>
+            </ul>
+        </div>
+    
+    </section>
+    
+    <!-- For Loop -->
+    <section id="for-loop" class="background-light">
+        <h2 class="text-animation">For Loop</h2>
+    
+        <ol>
+            <li>
+                If the number of iterations is known, then the <code>for</code> loop is used.
+            </li>
+            <li>
+                Starting point and ending point are specified.
+            </li>
+            <li>
+                The <code>for</code> loop is used only on iterable data types (collection data types).
+            </li>
+            <li>
+                The number of iterations is the same as the number of elements in the iterable.
+            </li>
+        </ol>
+    
+        <div id="for-loop-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+            <code>
+                for variable_name in iterable:<br>
+            </code>
+            <code>
+                for variable_name in range(start, end+1):
+            </code>
+        </div>
+    
+    </section>
+    
+    <!-- While Loop -->
+    <section id="while-loop" class="background-light">
+        <h2 class="text-animation">While Loop</h2>
+    
+        <ol>
+            <li>
+                If the number of iterations is unknown, then the <code>while</code> loop is used.
+            </li>
+            <li>
+                The loop continues as long as the given condition is True.
+            </li>
+            <li>
+                When the given condition is False, control exits the <code>while</code> loop.
+            </li>
+            <li>
+                Starting point and ending point conditions are checked within the loop.
+            </li>
+        </ol>
+    
+        <div id="while-loop-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+            <code>
+                while condition:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the while loop
+            </code>
+        </div>
+    
+    </section>
+    <!-- Break Statement -->
+    <section id="control-statement" class="background-light">
+        <h2 class="text-animation">Control Statements</h2>
+        <h2 class="text-animation">Break Statement</h2>
+    
+        <ol>
+            <li>
+                <code>break</code> takes the control outside the loop.
+            </li>
+            <li>
+                It terminates the control flow of the loop.
+            </li>
+        </ol>
+    
+        <div id="break-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+            <code>
+                for variable_name in iterable:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the loop<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if condition:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break  # Break statement
+            </code>
+        </div>
+    
+    <!-- Continue Statement -->
+   
+        <h2 class="text-animation">Continue Statement</h2>
+    
+        <ol>
+            <li>
+                When control reaches <code>continue</code>, it moves to the next iteration, skipping the current one.
+            </li>
+        </ol>
+    
+        <div id="continue-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+            <code>
+                for variable_name in iterable:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the loop<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if condition:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue  # Continue statement
+            </code>
+        </div>
+    
+    
+    
+    <!-- Pass Statement -->
+    
+        <h2 class="text-animation">Pass Statement</h2>
+    
+        <ol>
+            <li>
+                <code>pass</code> is used to create an empty block; it does not affect the code.
+            </li>
+        </ol>
+    
+        <div id="pass-syntax">
+            <h3 class="text-animation">Syntax:</h3>
+            <code>
+                for variable_name in iterable:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Code inside the loop<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;pass  # Pass statement
+            </code>
+        </div>
+    
+    </section>
+    
+    </section>
+    <!-- Continued from the previous code -->
+    
+    <!-- User Defined Functions -->
+    <section id="user-defined-functions" class="background-light">
+        <h2 class="text-animation">User Defined Functions</h2>
+    
+        <p>
+            Functions in Python can be broadly categorized into two types: inbuilt functions and user-defined functions.
+        </p>
+    
+        <!-- User Defined Functions -->
+        <div id="user-defined-functions">
+            <h3 class="text-animation">User Defined Functions</h3>
+            <p>
+                User-defined functions are created by the programmer to perform a specific task.
+                These functions are defined using the <code>def</code> keyword.
+            </p>
+            <code>
+                def function_name(parameters):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return result
+            </code>
+            <p>
+                A function call is made by providing the required arguments after the function name.
+            </p>
+            <code>
+                result = function_name(arguments)
+            </code>
+            <p>
+                The <code>return</code> keyword is used to return values from the function to the calling code.
+                Multiple values can be returned using the <code>return</code> keyword.
+            </p>
+            <code>
+                def example_function():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return value1, value2
+            </code>
+            <p>
+                Function execution transfers control from the functional space to the main space.
+            </p>
+        </div>
+    </section>
+        <!-- Types of Arguments -->
+        <section class="background-light">
+        <div id="types-of-arguments">
+            <h2 class="text-animation">Types of Arguments</h2>
+    
+            <!-- Positional Arguments -->
+            <div id="positional-arguments">
+                <h3 class="text-animation">Positional Arguments</h3>
+                <p>
+                    Positional arguments involve passing values in the proper order as defined in the function declaration.
+                    The number of arguments in the function call and function declaration must be the same.
+                </p>
+                <code>
+                    def example_function(arg1, arg2):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                    result = example_function(value1, value2)
+                </code>
+            </div>
+    
+            <!-- Keyword Arguments -->
+            <div id="keyword-arguments">
+                <h3 class="text-animation">Keyword Arguments</h3>
+                <p>
+                    Keyword arguments involve passing values with specific variable names.
+                    The number of arguments in the function call and function declaration must be the same.
+                </p>
+                <code>
+                    def example_function(arg1, arg2):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                    result = example_function(arg1=value1, arg2=value2)
+                </code>
+            </div>
+    
+            <!-- Default Arguments -->
+            <div id="default-arguments">
+                <h3 class="text-animation">Default Arguments</h3>
+                <p>
+                    Default arguments have default values and are used when no external value is passed in the function call.
+                    The number of arguments in the function call and function declaration is not required to be the same.
+                </p>
+                <code>
+                    def example_function(arg1, arg2=default_value):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                    result = example_function(value1)
+                </code>
+            </div>
+    
+            <!-- Variable Length Non-Keyword Arguments -->
+            <div id="variable-length-non-keyword-arguments">
+                <h3 class="text-animation">Variable Length Non-Keyword Arguments</h3>
+                <p>
+                    Variable-length non-keyword arguments allow a function to accept any number of values.
+                    The variable name is prefixed with <code>*</code>, and the result is stored in the form of a tuple.
+                </p>
+                <code>
+                    def example_function(*args):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                    result = example_function(value1, value2, value3)
+                </code>
+            </div>
+    
+            <!-- Variable Length Keyword Arguments -->
+            <div id="variable-length-keyword-arguments">
+                <h3 class="text-animation">Variable Length Keyword Arguments</h3>
+                <p>
+                    Variable-length keyword arguments allow a function to accept any number of keyword arguments.
+                    The variable name is prefixed with <code>**</code>, and the result is stored in the form of a dictionary.
+                </p>
+                <code>
+                    def example_function(**kwargs):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Function body<br>
+                    result = example_function(arg1=value1, arg2=value2)
+                </code>
+            </div>
+    
+        </div>
+    
+    </section>
+    <!-- Recursion -->
+    <section id="recursion" class="background-light">
+        <h2 class="text-animation">Recursion</h2>
+    
+        <p>
+            Recursion is a programming concept where a function calls itself or a function call is placed inside the same function. 
+        </p>
+    </section>
+    
+    <!-- Advantages of Recursion -->
+    <section id="advantages" class="background-light">
+        <h2 class="text-animation">Advantages of Recursion</h2>
+    
+        <ul>
+            <li>By using recursion, loops can be avoided.</li>
+            <li>The number of lines of code is reduced.</li>
+            <li>Complex programs can be divided into parts for better organization and understanding.</li>
+        </ul>
+    </section>
+    
+    <!-- Disadvantages of Recursion -->
+    <section id="disadvantages" class="background-light">
+        <h2 class="text-animation">Disadvantages of Recursion</h2>
+    
+        <ul>
+            <li>Recursion may consume a significant amount of memory storage.</li>
+            <li>Backtracking in recursive solutions can be challenging.</li>
+        </ul>
+    </section>
+    
+    <!-- Examples of Recursion -->
+    <section id="examples" class="background-light">
+        <h2 class="text-animation">Examples of Recursion</h2>
+    
+        <ol>
+            <li>
+                <p>Write a program to print numbers from 1 to 10 using recursion:</p>
+                <pre><code>def fun(x):
+        print(x, end=' ')
+        if x == 10:
+            return
+        fun(x + 1)
+    
+    fun(1)</code></pre>
+                <p>Output: 1 2 3 4 5 6 7 8 9 10</p>
+            </li>
+    
+            <li>
+                <p>Write a program to add digits in a number using recursion:</p>
+                <pre><code>def sum(n):
+        if n == 0:
+            return 0
+        return n % 10 + sum(n // 10)
+    
+    print(sum(423))</code></pre>
+                <p>Output: 9</p>
+            </li>
+    
+            <li>
+                <p>Write a program to print the factorial of a number using recursion:</p>
+                <pre><code>def fact(n):
+        if n == 0 or n == 1:
+            return 1
+        return n * fact(n - 1)
+    
+    print(fact(5))</code></pre>
+                <p>Output: 120</p>
+            </li>
+    
+            <li>
+                <p>Write a program to print Fibonacci numbers using recursion:</p>
+                <pre><code>def fib(n):
+        if n == 1 or n == 2:
+            return n - 1
+        return fib(n - 1) + fib(n - 2)
+    
+    print(fib(5))</code></pre>
+                <p>Output: 3</p>
+            </li>
+        </ol>
+    </section>
+    
+    <!-- Continue with HTML code -->
+    <!-- Scope Variables -->
+    <section id="scope-variables" class="background-light">
+        <h2 class="text-animation">Scope Variables</h2>
+    
+        <!-- Global Variables -->
+        <section id="global-variables" class="background-light">
+            <h3 class="text-animation">Global Variables</h3>
+    
+            <ul>
+                <li>
+                    <p>Global variables are declared outside the function.</p>
+                </li>
+                <li>
+                    <p>Global variables are accessible both in the local space and global space.</p>
+                </li>
+            </ul>
+    
+            <!-- Example: Global Variables -->
+            <div class="code-example">
+                <pre><code>def fun():
+        print(f'local space {n}')
+    
+    n = 200
+    fun()
+    print(f'global space {n}')</code></pre>
+            </div>
+        </section>
+    
+        <!-- Local Variables -->
+        <section id="local-variables" class="background-light">
+            <h3 class="text-animation">Local Variables</h3>
+    
+            <ul>
+                <li>
+                    <p>Local variables are declared inside the function.</p>
+                </li>
+                <li>
+                    <p>Local variables are accessed only in the local space.</p>
+                </li>
+            </ul>
+    
+            <!-- Example: Local Variables -->
+            <div class="code-example">
+                <pre><code>def fun():
+        global s
+        s = 300 + s
+        print(f'local space {s}')
+    
+    s = 100
+    fun()
+    print(f'global space {s}')</code></pre>
+            </div>
+    
+            <p class="note">
+                Note: Local variables can be used globally after declaring the local variable as a global variable using the <code>global</code> keyword.
+            </p>
+        </section>
+    </section>
+    
+    <!-- Continue with HTML code -->
+    <!-- Inbuilt Functions -->
+    <section id="inbuilt-functions" class="background-light">
+        <h2 class="text-animation">Inbuilt Functions</h2>
+    
+        <!-- Lambda Function -->
+        <section id="lambda-function" class="background-light">
+            <h3 class="text-animation">1. Lambda Function</h3>
+    
+            <!-- Lambda Function Definition and Examples -->
+            <ul>
+                <li>Lambda function is a function without a name, also called an anonymous function.</li>
+                <li>It is used for performing simple operations.</li>
+                <li>It accepts more than one argument and returns only one value.</li>
+            </ul>
+    
+            <!-- Example 1 -->
+            <section id="lambda-example-1" class="background-light">
+                <h4 class="text-animation">Example 1</h4>
+    
+                <pre>
+                    <code>
+                        var_1 = lambda a: a * 10
+                        print(var_1(5))
+                    </code>
+                </pre>
+    
+                <p>Output: 50</p>
+            </section>
+    
+            <!-- Example 2 -->
+            <section id="lambda-example-2" class="background-light">
+                <h4 class="text-animation">Example 2</h4>
+    
+                <pre>
+                    <code>
+                        var_2 = lambda a, b, c: a * b * c
+                        print(var_2(1, 2, 3))
+                    </code>
+                </pre>
+    
+                <p>Output: 6</p>
+            </section>
+        </section>
+    
+        <!-- Map Function -->
+        <section id="map-function" class="background-light">
+            <h3 class="text-animation">2. Map Function</h3>
+    
+            <!-- Map Function Definition and Examples -->
+            <ul>
+                <li>Map function is an inbuilt function used to process and modify values in collection data types.</li>
+                <li>The output of the map function is always a map object.</li>
+                <li>The number of input values and the number of output values are the same.</li>
+                <li>We can avoid using loops.</li>
+            </ul>
+    
+            <!-- Example 1 -->
+            <section id="map-example-1" class="background-light">
+                <h4 class="text-animation">Example 1</h4>
+    
+                <pre>
+                    <code>
+                        N = [10, 20, 30, 40]
+                        x = list(map(lambda a: a // 5, N))
+                        print(x)
+                    </code>
+                </pre>
+    
+                <p>Output: [2, 4, 6, 8]</p>
+            </section>
+    
+            <!-- Example 2 -->
+            <section id="map-example-2" class="background-light">
+                <h4 class="text-animation">Example 2</h4>
+    
+                <pre>
+                    <code>
+                        def div(n):
+                            return n // 5
+    
+                        N = [10, 20, 30, 40]
+                        x = map(div, N)
+                        print(list(x))
+                    </code>
+                </pre>
+    
+                <p>Output: [2, 4, 6, 8]</p>
+            </section>
+        </section>
+    
+        <!-- Filter Function -->
+        <section id="filter-function" class="background-light">
+            <h3 class="text-animation">3. Filter Function</h3>
+    
+            <!-- Filter Function Definition and Examples -->
+            <ul>
+                <li>Filter function is used to filter values according to user requirements.</li>
+                <li>The filter function returns a filter object.</li>
+                <li>The number of input values is not the same as the number of output values.</li>
+                <li>We can avoid using loops.</li>
+            </ul>
+    
+            <!-- Example 1 -->
+            <section id="filter-example-1" class="background-light">
+                <h4 class="text-animation">Example 1</h4>
+    
+                <pre>
+                    <code>
+                        L = [11, 12, 13, 14, 15]
+                        even = list(filter(lambda a: a % 2 != 0, L))
+                        print(even)
+                    </code>
+                </pre>
+    
+                <p>Output: [11, 13, 15]</p>
+            </section>
+        </section>
+    
+        <!-- Reduce Function -->
+        <section id="reduce-function" class="background-light">
+            <h3 class="text-animation">4. Reduce Function</h3>
+    
+            <!-- Reduce Function Definition and Examples -->
+            <ul>
+                <li>Reduce function performs a mathematical expression called reduction.</li>
+                <li>The reduce function returns one value.</li>
+                <li>We can avoid using loops.</li>
+            </ul>
+    
+            <!-- Example 1 -->
+            <section id="reduce-example-1" class="background-light">
+                <h4 class="text-animation">Example 1</h4>
+    
+                <pre>
+                    <code>
+                        from functools import reduce
+    
+                        X = [2, 3, 4, 5, 6]
+                        N = reduce(lambda a, b: a + b, X)
+                        print(N)
+                    </code>
+                </pre>
+    
+                <p>Output: 20</p>
+            </section>
+    
+            <!-- Example 2 -->
+            <section id="reduce-example-2" class="background-light">
+                <h4 class="text-animation">Example 2</h4>
+    
+                <pre>
+                    <code>
+                        from functools import reduce
+    
+                        N = 5
+                        x = reduce(lambda a, b: a * b, range(1, N + 1))
+                        print(x)
+                    </code>
+                </pre>
+    
+                <p>Output: 120</p>
+            </section>
+        </section>
+    </section>
+    
+    <!-- Continue with more HTML code -->
+    <!-- Python OOPs Concept Continued -->
+    <section id="python-oops-concept-continued" class="background-light">
+        
+        <h4 class="text-animation" style="text-align: center; color: purple;">Python OOPs Concept Continued</h4>
+        <ul>
+            <li>Class members are declared inside the class.</li>
+            <li>We can access them using the class name and object name.</li>
+            <li>If modified using the class name, it affects all objects.</li>
+            <li>If modified using the object name, it affects only that object.</li>
+        </ul>
+    
+        <!-- Class Example -->
+        <section id="class-example-continued" class="background-light">
+            <h4 class="text-animation">Class Example</h4>
+    
+            <pre>
+                <code>
+    class Fruits:
+        name = 'apple'
+        kg = '2kg'
+        sale = 'harsha'
+    
+    obj1 = Fruits()
+    obj2 = Fruits()
+    
+    print('---- Accessed by using class name ----')
+    print(Fruits.name)
+    print(Fruits.kg)
+    print(Fruits.sale)
+    
+    print('---- Accessed by using object name ----')
+    print(obj1.name)
+    print(obj1.kg)
+    print(obj1.sale)
+    
+    print('---- Modify by using class name ----')
+    Fruits.name = 'orange'
+    print(obj1.name)
+    print(obj2.name)
+                </code>
+            </pre>
+        </section>
+    </section>
+    <!-- Class Members Continued -->
+    <section id="class-members-continued" class="background-light">
+        <h3 class="text-animation">Class Members Continued</h3>
+    
+        <ul>
+            <li>Class members are declared inside the class.</li>
+            <li>We can access them using the class name and object name.</li>
+            <li>If modified using the class name, it affects all objects.</li>
+            <li>If modified using the object name, it affects only that object.</li>
+        </ul>
+    
+        <!-- Example Continued -->
+        <section id="class-members-example-continued" class="background-light">
+            <h4 class="text-animation">Example Continued</h4>
+    
+            <pre>
+                <code>
+    class Fruits:
+        name = 'apple'
+        kg = '2kg'
+        sale = 'harsha'
+    
+    obj1 = Fruits()
+    obj2 = Fruits()
+    
+    print('---- Accessed by using class name ----')
+    print(Fruits.name)
+    print(Fruits.kg)
+    print(Fruits.sale)
+    
+    print('---- Accessed by using object name ----')
+    print(obj1.name)
+    print(obj1.kg)
+    print(obj1.sale)
+    
+    print('---- Modify by using class name ----')
+    Fruits.name = 'orange'
+    print(obj1.name)
+    print(obj2.name)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Object Members -->
+    <section id="object-members" class="background-light">
+        <h3 class="text-animation">Object Members</h3>
+    
+        <ul>
+            <li>Object members are declared inside the constructor.</li>
+            <li>We can access and modify them only by using the object name.</li>
+        </ul>
+    
+        <!-- Constructor Example -->
+        <section id="constructor-example" class="background-light">
+            <h4 class="text-animation">Constructor Example</h4>
+    
+            <pre>
+                <code>
+    class University:
+        c_name = 'SV University'
+        c_code = '21099'
+        teacher = 'Santosh'
+    
+        def __init__(self, name, age, mno, marks):
+            self.name = name
+            self.age = age
+            self.mno = mno
+            self.marks = marks
+    
+    st1 = University('Sai', 20, 785652553, 87)
+    st2 = University('Manju', 20, 89565655, 78)
+    
+    print(st1.name, st1.age, st1.mno, st1.marks)
+    print(st2.name, st2.age, st2.mno, st2.marks)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Difference Between Classname and Objectname -->
+    <section id="difference" class="background-light">
+        <h3 class="text-animation">Difference Between Classname and Objectname</h3>
+    
+        <ul>
+            <li>Class members are declared inside the class, whereas object members are declared inside the constructor.</li>
+            <li>Class members are accessed by using both classname and objectname, whereas object members are accessed by using only the objectname.</li>
+        </ul>
+    </section>
+    
+    <!-- Object Method -->
+    <section id="object-method" class="background-light">
+        <h3 class="text-animation">Object Method</h3>
+    
+        <ul>
+            <li>Object method is used to access and modify object members.</li>
+            <li>It is called by using the object name.</li>
+            <li>It carries a mandatory argument 'self' that holds the address of the object.</li>
+        </ul>
+    
+        <!-- Object Method Example -->
+        <section id="object-method-example" class="background-light">
+            <h4 class="text-animation">Example</h4>
+    
+            <pre>
+                <code>
+    class Bank:
+        bname = 'SBI'
+        roi = 0.6
+    
+        def __init__(self, name, acno, mno, bal):
+            self.name = name
+            self.acno = acno
+            self.mno = mno
+            self.bal = bal
+    
+        def check_bal(self):
+            print(f'{self.name} available balance is {self.bal}')
+    
+        def deposit(self, amt):
+            self.bal += amt
+            print('Amount deposited successfully !!!')
+    
+        def withdraw(self, amt):
+            if self.bal >= amt:
+                self.bal -= amt
+            else:
+                print('Insufficient balance')
+    
+    ob1 = Bank('Manoj', '1234573848', '9726763626', 20000)
+    ob1.check_bal()
+    ob1.withdraw(5000)
+    ob1.check_bal()
+                </code>
+            </pre>
+        </section>
+    </section>
+    <!-- Class Method -->
+    <section id="class-method" class="background-light">
+        <h3 class="text-animation">2. Class Method</h3>
+    
+        <ul>
+            <li>Class method is created by using @classmethod decorator.</li>
+            <li>Class method is used to access and modify class members.</li>
+            <li>It is called by using class name as well as object name.</li>
+            <li>It carries a mandatory argument 'cls' that contains the address of the class.</li>
+        </ul>
+    
+        <!-- Example 1 -->
+        <section id="class-method-example-1" class="background-light">
+            <h4 class="text-animation">Example 1</h4>
+    
+            <pre>
+                <code>
+    class B:
+        @classmethod
+        def method1(cls):
+            print(f'cls: {cls}')
+            print('method1 is called')
+    
+    obj = B()
+    obj.method1()
+    print('@' * 35)
+    B.method1()
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Example 2 -->
+        <section id="class-method-example-2" class="background-light">
+            <h4 class="text-animation">Example 2</h4>
+    
+            <pre>
+                <code>
+    class Bank:
+        bname = 'SBI'
+        roi = 0.6
+    
+        def __init__(self, name, acno, mno, bal):
+            self.name = name
+            self.acno = acno
+            self.mno = mno
+            self.bal = bal
+    
+        @classmethod
+        def changeroi(cls, value):
+            cls.roi = value
+    
+    ob1 = Bank('Manoj', '1234573848', '9726763626', 20000)
+    print(ob1.roi)
+    Bank.changeroi(0.8)
+    print(ob1.roi)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Static Method -->
+    <section id="static-method" class="background-light">
+        <h3 class="text-animation">3. Static Method</h3>
+    
+        <ul>
+            <li>It is called by using @staticmethod decorator.</li>
+            <li>We can't access and modify either class members or object members.</li>
+            <li>We can call it by class name as well as object name.</li>
+            <li>It will not accept any mandatory argument.</li>
+        </ul>
+    
+        <!-- Example 1 -->
+        <section id="static-method-example-1" class="background-light">
+            <h4 class="text-animation">Example 1</h4>
+    
+            <pre>
+                <code>
+    class C:
+        @staticmethod
+        def method2():
+            print('Static method is called')
+    
+    obj = C()
+    obj.method2()
+    C.method2()
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Example 2 -->
+        <section id="static-method-example-2" class="background-light">
+            <h4 class="text-animation">Example 2</h4>
+    
+            <pre>
+                <code>
+    class Bank:
+        bname = 'SBI'
+        roi = 0.6
+    
+        def __init__(self, name, acno, mno, bal, pin):
+            self.name = name
+            self.acno = acno
+            self.mno = mno
+            self.bal = bal
+            self.pin = pin
+    
+        @staticmethod
+        def getpin():
+            return int(input('Enter your pin number'))
+    
+        # Rest of the Bank class code
+        </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Access Modifiers -->
+    <section id="access-modifiers" class="background-light">
+        <h3 class="text-animation" style="text-align: center;">Access Modifiers</h3>
+    
+        <!-- Public Access Modifiers -->
+        <section id="public-access-modifiers" class="background-light">
+            <h4 class="text-animation">1. Public Access Modifiers</h4>
+    
+            <ul>
+                <li>By default, all variables are declared as public.</li>
+                <li>We can access them anywhere in the program.</li>
+            </ul>
+    
+            <!-- Public Access Modifiers Example -->
+            <section id="public-access-modifiers-example" class="background-light">
+                <h5 class="text-animation">Public Access Modifiers Example</h5>
+    
+                <pre>
+                    <code>
+    class Parent:
+        def __init__(self, name, age, address):
+            self.name = name  # public
+            self._age = age    # protected
+            self.address = address  # public
+    
+        def visibility(self):
+            print(self.name)
+    
+    obj = Parent('Kiran', 27, 'Bangalore')
+    print(obj.address)
+    print(obj._age)
+    obj.visibility()
+                    </code>
+                </pre>
+            </section>
+        </section>
+    
+        <!-- Protected Access Modifiers -->
+        <section id="protected-access-modifiers" class="background-light">
+            <h4 class="text-animation">2. Protected Access Modifiers</h4>
+    
+            <ul>
+                <li>Variables are declared as protected by using a single underscore.</li>
+                <li>They are accessible only within the same package.</li>
+            </ul>
+    
+            <!-- Protected Access Modifiers Example -->
+            <section id="protected-access-modifiers-example" class="background-light">
+                <h5 class="text-animation">Protected Access Modifiers Example</h5>
+    
+                <pre>
+                    <code>
+    # Assuming both classes are in the same package
+    
+    class Parent:
+        def __init__(self, name, age, address):
+            self._name = name  # protected
+            self._age = age    # protected
+            self.address = address  # public
+    
+        def visibility(self):
+            print(self._name)
+    
+    obj = Parent('Kiran', 27, 'Bangalore')
+    print(obj.address)
+    print(obj._age)
+    obj.visibility()
+                    </code>
+                </pre>
+            </section>
+        </section>
+    
+        <!-- Private Access Modifiers -->
+        <section id="private-access-modifiers" class="background-light">
+            <h4 class="text-animation">3. Private Access Modifiers</h4>
+    
+            <ul>
+                <li>Variables are declared as private by using a double underscore.</li>
+                <li>They are accessible only within the same class.</li>
+            </ul>
+    
+            <!-- Private Access Modifiers Example -->
+            <section id="private-access-modifiers-example" class="background-light">
+                <h5 class="text-animation">Private Access Modifiers Example</h5>
+    
+                <pre>
+                    <code>
+    class Parent:
+        def __init__(self, name, age, address):
+            self.__name = name  # private
+            self._age = age     # protected
+            self.address = address  # public
+    
+        def visibility(self):
+            print(self.__name)
+    
+    obj = Parent('Kiran', 27, 'Bangalore')
+    print(obj.address)
+    # print(obj.__name)  # This will result in an error
+    # print(obj._age)    # Protected member can be accessed, but it's not recommended
+    obj.visibility()
+                    </code>
+                </pre>
+            </section>
+        </section>
+    </section>
+    <section id="example-code-block" class="background-light">
+        <h3 class="text-animation code-block-header" data-code-block="example-code-block">Example Code Block</h3>
+    
+        <pre id="example-code-block">
+            <code>
+                // Your code here
+            </code>
+        </pre>
+    </section>
+        <!-- Oops Concepts -->
+        <section id="oops-concepts" class="background-light">
+            <h3 class="text-animation" style="text-align: center;color: purple;">Oops Concepts (Four Pillars of Oops)</h3>
+    
+            <ul>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Abstraction</li>
+            </ul>
+    
+            <!-- Encapsulation -->
+            <section id="encapsulation" class="background-light">
+                <h4 class="text-animation">1. Encapsulation</h4>
+    
+                <ul>
+                    <li>Binding data members in a single unit is called Encapsulation.</li>
+                    <li>It is used to protect data by restricting access to unauthorized users.</li>
+                </ul>
+    
+                <!-- Encapsulation Example -->
+                <section id="encapsulation-example" class="background-light">
+                    <h5 class="text-animation">Example</h5>
+    
+                    <pre>
+                        <code>
+    class A:
+        def __init__(self):
+            self.__value = 100
+    
+        def getter(self):
+            return self.__value
+    
+        def setter(self, x):
+            self.__value = x
+    
+    p = A()
+    print(p.getter())
+    p.setter(500)
+    print(p.getter())
+                        </code>
+                    </pre>
+                </section>
+            </section>
+    
+            <!-- Inheritance -->
+            <section id="inheritance" class="background-light">
+                <h4 class="text-animation">2. Inheritance</h4>
+    
+                <ul>
+                    <li>Inheriting (or Acquiring) properties of one class to another class is called Inheritance.</li>
+                    <li>There are 5 types of Inheritance:</li>
+                    <ul>
+                        <li>Single Inheritance</li>
+                        <li>Multi-level Inheritance</li>
+                        <li>Multiple Inheritance</li>
+                        <li>Hierarchical Inheritance</li>
+                        <li>Hybrid Inheritance</li>
+                    </ul>
+                </ul>
+    
+                <!-- Single Inheritance Example -->
+                <section id="single-inheritance-example" class="background-light">
+                    <h5 class="text-animation">Example (Single Inheritance)</h5>
+    
+                    <pre>
+                        <code>
+    class P:
+        bike = 'RX100'
+        car = 'SUV'
+    
+        def __init__(self):
+            self.property = 'House'
+    
+    class C(P):
+        pass
+    
+    p1 = P()
+    c1 = C()
+    
+    print(p1.bike, p1.car, p1.property, sep=',')
+    print(c1.bike, c1.car, c1.property, sep=',')
+                        </code>
+                    </pre>
+                </section>
+            </section>
+        </section>
+    
+    <!-- Constructor Chaining -->
+    <section id="constructor-chaining" class="background-light">
+        <h3 class="text-animation">Constructor Chaining</h3>
+    
+        <ul>
+            <li>Calling parent class constructor from the child class constructor is overridden with the child class constructor.</li>
+            <li>Constructor chaining syntax:</li>
+            <pre>
+                <code>
+    classname.__init__(self)
+    super().__init__()
+                </code>
+            </pre>
+        </ul>
+    
+        <!-- Constructor Chaining Examples -->
+        <section id="constructor-chaining-examples" class="background-light">
+            <h4 class="text-animation">Examples</h4>
+    
+            <pre>
+                <code>
+    # Example 1
+    class A:
+        def __init__(self):
+            print('Constructor of class A')
+    
+    class B(A):
+        pass
+    
+    ob1 = A()
+    ob2 = B()
+    
+    # Example 2
+    class A:
+        def __init__(self):
+            print('Constructor of class A')
+    
+    class B(A):
+        def __init__(self):
+            print('Constructor of class B')
+    
+    ob2 = B()
+    
+    # Example 3
+    class A:
+        def __init__(self):
+            print('Constructor of class A')
+    
+    class B(A):
+        def __init__(self):
+            print('Constructor of class B')
+    
+    ob2 = B()
+    
+    # Example 4
+    class A:
+        def __init__(self):
+            print('Constructor of class A')
+    
+    class B(A):
+        def __init__(self):
+            A.__init__(self)
+            print('Constructor of class B')
+    
+    ob2 = B()
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Multi-level Inheritance -->
+    <section id="multi-level-inheritance" class="background-light">
+        <h3 class="text-animation">2. Multi-level Inheritance</h3>
+    
+        <ul>
+            <li>Inheriting properties of one child class to another child class is called Multi-level Inheritance.</li>
+        </ul>
+    
+        <!-- Multi-level Inheritance Example -->
+        <section id="multi-level-inheritance-example" class="background-light">
+            <h4 class="text-animation">Example</h4>
+    
+            <pre>
+                <code>
+    class A:
+        x = 20
+    
+    class B(A):
+        pass
+    
+    class C(B):
+        pass
+    
+    ob1 = B()
+    print(ob1.x)
+    
+    ob2 = C()
+    print(ob2.x)
+                </code>
+            </pre>
+        </section>
+    </section>
+    <!-- Multiple Inheritance -->
+    <section id="multiple-inheritance" class="background-light">
+        <h3 class="text-animation">3. Multiple Inheritance</h3>
+    
+        <ul>
+            <li>Inheriting properties of more than one parent class to a single child class is called Multiple Inheritance.</li>
+        </ul>
+    
+        <!-- Multiple Inheritance Example -->
+        <section id="multiple-inheritance-example" class="background-light">
+            <h4 class="text-animation">Multiple Inheritance Example</h4>
+    
+            <pre>
+                <code>
+    class P1:
+        x = 10
+    
+    class P2:
+        x = 20
+    
+    class Child(P1, P2):
+        pass
+    
+    obj = Child()
+    print(obj.x)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Hierarchical Inheritance -->
+    <section id="hierarchical-inheritance" class="background-light">
+        <h3 class="text-animation">4. Hierarchical Inheritance</h3>
+    
+        <ul>
+            <li>Inheriting properties of a single parent class to multiple child classes is called Hierarchical Inheritance.</li>
+        </ul>
+    
+        <!-- Hierarchical Inheritance Example -->
+        <section id="hierarchical-inheritance-example" class="background-light">
+            <h4 class="text-animation">Hierarchical Inheritance Example</h4>
+    
+            <pre>
+                <code>
+    class A:
+        x = 10
+    
+    class B(A):
+        pass
+    
+    class C(A):
+        pass
+    
+    c1 = C()
+    b1 = B()
+    print(b1.x)
+    print(c1.x)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Hybrid Inheritance -->
+    <section id="hybrid-inheritance" class="background-light">
+        <h3 class="text-animation">5. Hybrid Inheritance</h3>
+    
+        <ul>
+            <li>Combination of more than one type of inheritance is called Hybrid Inheritance.</li>
+        </ul>
+    
+        <!-- Hybrid Inheritance Example -->
+        <section id="hybrid-inheritance-example" class="background-light">
+            <h4 class="text-animation">Hybrid Inheritance Example</h4>
+    
+            <pre>
+                <code>
+    class A:
+        x = 20
+    
+    class B(A):
+        x = 30
+    
+    class C(A):
+        pass
+    
+    class D(B, C):
+        pass
+    
+    b1 = B()
+    c1 = C()
+    d1 = D()
+    print(b1.x)
+    print(c1.x)
+    print(d1.x)
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Constructor Chaining in Multiple Inheritance -->
+    <section id="constructor-chaining" class="background-light">
+        <h3 class="text-animation">Constructor Chaining in Multiple Inheritance</h3>
+    
+        <ul>
+            <li>Constructor chaining in multiple inheritance is not possible using the super method because the super method considers one parent class as the superclass.</li>
+            <li>We need to use the class name to perform constructor chaining.</li>
+        </ul>
+    
+        <!-- Constructor Chaining Example -->
+        <section id="constructor-chaining-example" class="background-light">
+            <h4 class="text-animation">Constructor Chaining Example</h4>
+    
+            <pre>
+                <code>
+    class P1:
+        def __init__(self):
+            print('Constructor of P1')
+    
+    class P2:
+        def __init__(self):
+            print('Constructor of P2')
+    
+    class Child(P1, P2):
+        def __init__(self):
+            P1.__init__(self)
+            P2.__init__(self)
+            print('Constructor of Child class')
+    
+    obj = Child()
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Method Resolution Order -->
+    <section id="method-resolution-order" class="background-light">
+        <h3 class="text-animation">Method Resolution Order</h3>
+    
+        <p>It is the process of resolving methods and data members.</p>
+    
+        <!-- Method Resolution Order Example -->
+        <section id="method-resolution-order-example" class="background-light">
+            <h4 class="text-animation">Method Resolution Order Example</h4>
+    
+            <pre>
+                <code>
+    class A:
+        pass
+    
+    class B:
+        pass
+    
+    class C(A, B):
+        pass
+    
+    class D(A, B):
+        pass
+    
+    class E(C, D):
+        pass
+    
+    print(E.mro())
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Polymorphism -->
+    <section id="polymorphism" class="background-light">
+        <h3 class="text-animation">3. Polymorphism</h3>
+    
+        <ul>
+            <li>Poly means having many forms.</li>
+            <li>One object behaving in different forms is called polymorphism.</li>
+            <li>Polymorphism is achieved by using overloading (compile-time polymorphism) and overriding (run-time polymorphism).</li>
+        </ul>
+    
+        <!-- Overloading Example 1 -->
+        <section id="overloading-example-1" class="background-light">
+            <h4 class="text-animation">Example 1 - Overloading</h4>
+    
+            <pre>
+                <code>
+    class A:
+        def add(self, a, b, c=0, d=0):
+            return a + b + c + d
+    
+    obj = A()
+    print(obj.add(2, 3, 4, 5))
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Overloading Example 2 - Using Default Arguments -->
+        <section id="overloading-example-2" class="background-light">
+            <h4 class="text-animation">Example 2 - Using Default Arguments</h4>
+    
+            <pre>
+                <code>
+    class A:
+        def add(self, a=0, b=0, c=0, d=0):
+            return a + b + c + d
+    
+    obj = A()
+    print(obj.add(2, 3))
+    print(obj.add(2, 3, 4))
+    print(obj.add(2, 3, 4, 5))
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Overriding Example -->
+        <section id="overriding-example" class="background-light">
+            <h4 class="text-animation">Overriding Example</h4>
+    
+            <pre>
+                <code>
+    class A:
+        def method1(self):
+            print('Method 1 in A')
+    
+    class B(A):
+        def method1(self):
+            print('Method 1 in B')
+    
+    obj = B()
+    obj.method1()
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Abstraction -->
+    <section id="abstraction" class="background-light">
+        <h3 class="text-animation">4. Abstraction</h3>
+    
+        <ul>
+            <li>Abstraction is hiding internal implementation and showing basic functionalities to the user.</li>
+            <li>Abstract class is created by inheriting properties of ABC (Abstract Base Class) in the abc module.</li>
+            <li>Abstract method is created by using @abstractmethod decorator available in the abc module.</li>
+            <li>Abstract class can have both abstract and concrete methods, but abstract methods should not have any implementation.</li>
+            <li>For every abstract method, giving implementation in the child class is a must.</li>
+        </ul>
+    
+        <!-- Abstraction Example -->
+        <section id="abstraction-example" class="background-light">
+            <h4 class="text-animation">Example</h4>
+    
+            <pre>
+                <code>
+    from abc import ABC, abstractmethod
+    
+    class Polygon(ABC):
+        @abstractmethod
+        def sides(self):
+            pass
+    
+    class Triangle(Polygon):
+        def sides(self):
+            print('Three sides')
+    
+    class Square(Polygon):
+        def sides(self):
+            print('Four sides')
+    
+    class Pentagon(Polygon):
+        def sides(self):
+            print('Five sides')
+    
+    class Hexagon(Polygon):
+        def sides(self):
+            print('Six sides')
+    
+    ob1 = Triangle()
+    ob2 = Square()
+    ob3 = Pentagon()
+    ob4 = Hexagon()
+    
+    ob1.sides()
+    ob2.sides()
+    ob3.sides()
+    ob4.sides()
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Decorator -->
+    <section id="decorator" class="background-light">
+        <h3 class="text-animation">7. Decorator</h3>
+    
+        <ul>
+            <li>A decorator is a design pattern in Python that allows adding new functionality to an existing object without modifying its structure.</li>
+            <li>It is used to change the behavior of a function or class without modifying the function itself.</li>
+        </ul>
+    
+        <!-- Decorator Example 1 -->
+        <section id="decorator-example-1" class="background-light">
+            <h4 class="text-animation">Decorator Example 1</h4>
+    
+            <pre>
+                <code>
+    def outer(p1):
+        def inner(x, y):
+            if x > y:
+                p1(x, y)
+            else:
+                p1(y, x)
+        return inner
+    
+    @outer
+    def division(a, b):
+        print(a / b)
+    
+    division(20, 5)
+    division(2, 100)
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Decorator Example 2 -->
+        <section id="decorator-example-2" class="background-light">
+            <h4 class="text-animation">Decorator Example 2</h4>
+    
+            <pre>
+                <code>
+    def login_required(A1):
+        def inner(name, login):
+            if login == False:
+                print('Kindly login')
+                return
+            return A1(name, login)
+        return inner
+    
+    @login_required
+    def home(name, login):
+        print('Welcome to the home page')
+    
+    @login_required
+    def orders(name, login):
+        print('Welcome to the orders page')
+    
+    def about():
+        print('Welcome to the about section')
+    
+    home('Sanju', False)
+    orders('Manju', True)
+    about()
+                </code>
+            </pre>
+        </section>
+    </section>
+    
+    <!-- Continue the same structure for the rest of the content -->
+
+<script src="./script.js"></script>
+<section id="collection-data-types-details" class="background-light">
+    <!-- Your existing HTML content here -->
+
+    <!-- Include the following script for dark theme toggle -->
+    <script>
+        const body = document.body;
+        const toggleButton = document.createElement('button');
+        toggleButton.textContent = 'START LEANING PYTHON -notes';
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+        });
+        document.body.insertBefore(toggleButton, document.body.firstChild);
+    </script>
+
+
+
+    <section id="pdf" class="background-light">
+        <h2 class="text-animation">PYTHON NOTES </h2>
+        <p>Download the PDFs:</p>
+        <ul>
+            <li><a href="file:///C:/Users/91998/Downloads/Telegram%20Desktop/Features%20of%20python%20(1)%20(1)%20(1).pdf" download class="text-animation">Python notes PDF 1</a></li>
+            <li><a href="file:///C:/Users/91998/Downloads/sodapdf-converted%20(4).pdf" download class="text-animation">Python notes PDF 2</a></li>
+            <!-- Add more PDF links as needed -->
+        </ul>
+    </section>
+</center>
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById("mySidenav");
+            const content = document.getElementById("content");
+            nav.style.left = nav.style.left === "0px" ? "-250px" : "0";
+            content.style.marginLeft = nav.style.left === "0px" ? "250px" : "0";
+        }
+    </script>
+</a>
+</body>
+</center>
+</html>

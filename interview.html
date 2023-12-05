@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>START LEARNING PYTHON - NOTES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cc4f5a4871.js" crossorigin="anonymous"></script>
+    <style>
+       
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://tse2.mm.bing.net/th?id=OIP.smPyvtnIod5qk0v5fmsakgHaEK&pid=Api&P=0&h=220'); /* Replace with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #e11919; /* Optional: Set text color to make it readable on the background */
+        }
+        
+        .background-light {
+            background-color: rgba(255, 255, 255, 0.7); /* Use an rgba value with alpha for a semi-transparent background */
+            padding: 20px; /* Optional: Add padding for better visual appearance */
+        }
+        
+        /* Add more styles for other sections as needed */
+        
+
+        header {
+            background-color: #333;
+            color: #2d1010;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #620000;
+            padding: 10px;
+        }
+
+        i {
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white">
+        <h1>START LEARNING PYTHON</h1>
+    </header>
+
+    <nav class="navbar navbar-light bg-light">
+        <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+        <a href="home.html" class="text-animation">Home</a>
+        <a href="pythonnotes.html" class="text-animation">Python Notes</a>
+        <a href="videos.html" class="text-animation">YouTube Videos</a>
+        <a href="interview.html" class="text-animation">Interview Questions</a>
+        <a href="about.html" class="text-animation">About</a>
+    </nav>
+
+    <section id="Interview" class="background-light">
+        <h2 class="text-animation">Interview Questions</h2>
+        <ol>
+            <li class="text-animation">What are the features of Python?</li>
+            <li class="text-animation">What is an interpreted language?</li>
+            <li class="text-animation">What is the meaning of dynamically typed?</li>
+            <li class="text-animation">Explain identifiers and rules of identifiers?</li>
+            <li class="text-animation">How to create a block in Python?</li>
+            <li class="text-animation">What is type casting?</li>
+            <li class="text-animation">What is the difference between a list and a tuple?</li>
+            <li class="text-animation">Explain a set.</li>
+            <li class="text-animation">What is the difference between a set and a dictionary?</li>
+            <li class="text-animation">What is the difference between a list and a set?</li>
+            <li class="text-animation">Explain a dictionary.</li>
+            <li class="text-animation">What are the inbuilt methods to add to a list?</li>
+            <li class="text-animation">What are the inbuilt methods to add to a set?</li>
+            <li class="text-animation">What are the inbuilt methods to remove in a list?</li>
+            <li class="text-animation">What are the inbuilt methods to remove in a set?</li>
+            <li class="text-animation">What are the inbuilt methods to remove a key-value pair in a dictionary?</li>
+            <li class="text-animation">How to add a key-value pair in a dictionary?</li>
+            <li class="text-animation">What is the difference between get method and set default method?</li>
+            <li class="text-animation">What is the difference between index and find?</li>
+            <li class="text-animation">What is the difference between rindex and rfind?</li>
+            <li class="text-animation">Print "Hello, World!" without using print?</li>
+            <li class="text-animation">What is the difference between break and continue?</li>
+            <li class="text-animation">Explain conditional statements (if, else, elif).</li>
+            <li class="text-animation">What is the difference between a for loop and a while loop?</li>
+            <li class="text-animation">Explain a for loop with an example with and without using range.</li>
+            <li class="text-animation">Explain a while loop with an example.</li>
+            <li class="text-animation">What is a function with an example?</li>
+            <li class="text-animation">What does the return keyword explain?</li>
+            <li class="text-animation">Explain types of arguments in Python?</li>
+            <li class="text-animation">What is the difference between positional arguments and keyword arguments?</li>
+            <li class="text-animation">Explain types of scope variables (global and local).</li>
+            <li class="text-animation">Explain recursion, its advantages, and disadvantages.</li>
+            <li class="text-animation">Explain a lambda function with one example.</li>
+            <li class="text-animation">Explain the map function with one example.</li>
+            <li class="text-animation">Explain the filter function with one example.</li>
+            <li class="text-animation">Explain the reduce function with one example.</li>
+            <li class="text-animation">What is a class?</li>
+            <li class="text-animation">What is an object?</li>
+            <li class="text-animation">What are the four pillars of OOPs concepts, and explain each?</li>
+            <li class="text-animation">Explain the advantages of OOPs concepts.</li>
+            <li class="text-animation">Explain encapsulation with an example.</li>
+            <li class="text-animation">Explain inheritance and types of inheritance.</li>
+            <li class="text-animation">Explain polymorphism.</li>
+            <li class="text-animation">What is abstraction?</li>
+            <li class="text-animation">Explain the difference between encapsulation and abstraction.</li>
+            <li class="text-animation">What is a constructor, and what is self?</li>
+            <li class="text-animation">What is the difference between an object method and a class method?</li>
+            <li class="text-animation">What is the difference between a class method and a static method?</li>
+            <li class="text-animation">Explain OOPs concepts with real-time examples.</li>
+        </ol>
+    </section>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+            });
+        }
+    </script>
+</body>
+</html>
